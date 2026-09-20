@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resultado da Avaliação - Desenvolvimento Web III</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="/" class="logo">Gerenciador de Tarefas</a>
+      <ul class="nav-links">
+        <li><a href="/">Início</a></li>
+        <li><a href="/seu_problema">Calcular Média</a></li>
+        <li><a href="/sobre">Sobre</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="card">
+      <h1>Resultado da Avaliação</h1>
+      <p>Confira abaixo o resultado do cálculo da média e o status acadêmico do estudante:</p>
+
+      <div class="resultado-box">
+        <div class="resultado-item">
+          <span><strong>Estudante:</strong></span>
+          <span>{{nome}}</span>
+        </div>
+        <div class="resultado-item">
+          <span><strong>Nota 1:</strong></span>
+          <span>{{nota1}}</span>
+        </div>
+        <div class="resultado-item">
+          <span><strong>Nota 2:</strong></span>
+          <span>{{nota2}}</span>
+        </div>
+        <div class="resultado-item">
+          <span><strong>Média Final:</strong></span>
+          <span><strong>{{media}}</strong></span>
+        </div>
+        <div class="resultado-item">
+          <span><strong>Situação:</strong></span>
+          <span><span class="badge {{badgeClass}}">{{situacao}}</span></span>
+        </div>
+      </div>
+
+      <div style="display: flex; gap: 1rem;">
+        <a href="/seu_problema" class="btn">Novo Cálculo</a>
+        <a href="/" class="btn btn-secondary">Página Inicial</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; Direitos Reservados 2026 - Desenvolvimento Web III</p>
+  </footer>
+</body>
+</html>
