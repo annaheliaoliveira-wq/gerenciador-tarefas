@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calcular Média - Desenvolvimento Web III</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="/" class="logo">Gerenciador de Tarefas</a>
+      <ul class="nav-links">
+        <li><a href="/">Início</a></li>
+        <li><a href="/seu_problema" class="active">Calcular Média</a></li>
+        <li><a href="/sobre">Sobre</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="card">
+      <h1>Cálculo de Média do Estudante</h1>
+      <p>Preencha os dados abaixo para calcular a média e verificar a situação acadêmica do estudante.</p>
+
+      <form action="/resposta_problema" method="POST">
+        <div class="form-group">
+          <label for="nome">Nome do Estudante:</label>
+          <input type="text" id="nome" name="nome" placeholder="Ex: Estudante A" required>
+        </div>
+
+        <div class="form-group">
+          <label for="nota1">Primeira Nota (0 a 10):</label>
+          <input type="number" id="nota1" name="nota1" step="0.1" min="0" max="10" placeholder="Ex: 7.0" required>
+        </div>
+
+        <div class="form-group">
+          <label for="nota2">Segunda Nota (0 a 10):</label>
+          <input type="number" id="nota2" name="nota2" step="0.1" min="0" max="10" placeholder="Ex: 8.0" required>
+        </div>
+
+        <button type="submit" class="btn">Calcular Média</button>
+      </form>
+
+      <h2>Casos de Teste do Tema</h2>
+      <div class="info-grid">
+        <div class="info-card">
+          <h3>Caso 1</h3>
+          <p><strong>Nome:</strong> Estudante A<br><strong>Notas:</strong> 7.0 e 8.0<br><strong>Esperado:</strong> Aprovado</p>
+        </div>
+        <div class="info-card">
+          <h3>Caso 2</h3>
+          <p><strong>Nome:</strong> Estudante B<br><strong>Notas:</strong> 5.0 e 6.0<br><strong>Esperado:</strong> Reprovado</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; Direitos Reservados 2026 - Desenvolvimento Web III</p>
+  </footer>
+</body>
+</html>
